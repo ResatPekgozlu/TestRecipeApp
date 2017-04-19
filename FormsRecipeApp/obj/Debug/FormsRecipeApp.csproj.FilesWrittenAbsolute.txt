@@ -1,0 +1,12 @@
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile111.AssemblyAttribute.cs
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/obj/Debug/FormsRecipeApp.View.DetailPage.xaml
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/obj/Debug/FormsRecipeApp.View.MainPage.xaml
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/obj/Debug/FormsRecipeApp.View.DetailPage.xaml.g.cs
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/obj/Debug/FormsRecipeApp.View.MainPage.xaml.g.cs
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/bin/Debug/FormsRecipeApp.dll.mdb
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/bin/Debug/FormsRecipeApp.dll
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/obj/Debug/FormsRecipeApp.dll
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/obj/Debug/FormsRecipeApp.dll.mdb
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/bin/Debug/Xamarin.Forms.Core.dll
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/bin/Debug/Xamarin.Forms.Platform.dll
+/Users/RPekgozlu/Projects/FormsRecipe/FormsRecipeApp/bin/Debug/Xamarin.Forms.Xaml.dll

@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{11DE807F-4969-42EB-9187-D72F033A7D0B}|Default">
+  <MonoDevelop.Ide.ItemProperties.FormsRecipeApp.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FormsRecipeApp/View/DetailPage.xaml.cs">
+    <Files>
+      <File FileName="FormsRecipeApp/View/DetailPage.xaml.cs" Line="37" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FormsRecipeApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.5C1B3031-0863-43F5-A3D7-A26199E193DC" />
+</Properties>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FormsRecipeApp.MainPage">
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView x:Name="RecepiesList"
+				ItemTapped="OnSelected"
+				ItemsSource="{Binding Recipes}"
+				SeparatorVisibility="None"
+				RowHeight="250"
+				HasUnevenRows="false">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<ViewCell.View>
+								<RelativeLayout Scale=".9">
+									<Image Source="{Binding FotoUrl}" 
+										Aspect="AspectFill"
+										RelativeLayout.WidthConstraint=
+										"{ConstraintExpression Type=RelativeToParent, Property=Width}"
+										RelativeLayout.HeightConstraint=
+                                       "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+									<StackLayout Scale=".5"  
+										         RelativeLayout.WidthConstraint=
+                                                 "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                                                 RelativeLayout.HeightConstraint=
+                                                 "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
+										         VerticalOptions="Center">
+										<Frame BackgroundColor="#2096F4" 
+											   HasShadow="false">
+											<Label Text="BEKIJK RECEPT" 
+										           TextColor="White" 
+										           HorizontalTextAlignment="Center" 
+										           VerticalTextAlignment="Center" 
+										           HeightRequest="60" 
+										           FontSize="38"/>
+										</Frame>
+                                   </StackLayout>
+									<StackLayout Scale=".89"  
+										         RelativeLayout.WidthConstraint=
+                                                 "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                                                 RelativeLayout.HeightConstraint=
+                                                 "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.87}"
+										         VerticalOptions="EndAndExpand">	
+										<Frame BackgroundColor="White" 
+											   HasShadow="false">
+											<Label Text="{Binding RecipeTitle}" 
+										           TextColor="Navy" 
+										           HorizontalTextAlignment="Center" 
+										           VerticalTextAlignment="Center" 
+                                                   FontSize="18"
+										           FontAttributes="None"/>
+										</Frame>
+                                   </StackLayout>                     
+								</RelativeLayout>
+							</ViewCell.View>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>   
+</ContentPage>

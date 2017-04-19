@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	         xmlns:local="clr-namespace:FormsRecipeApp;assembly=FormsRecipeApp"
+	         x:Class="FormsRecipeApp.DetailPage">
+	<ListView x:Name="FileList" ItemsSource="{Binding Ingredients}" SeparatorVisibility="None" BackgroundColor="White">
+		<ListView.Header>
+			<StackLayout Orientation="Vertical">
+				<RelativeLayout>
+					<Image Source="{Binding RecipeToKook.FotoUrl}" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-120}"/>
+					<Frame BackgroundColor="White" VerticalOptions="Center" HasShadow="false" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=35}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=4, Constant=175}">
+						<Label Text="{Binding RecipeToKook.RecipeTitle}" TextColor="Black" FontSize="12" VerticalTextAlignment="Center"/>
+					</Frame>
+				</RelativeLayout>
+				<Frame BackgroundColor="#EFEFEF" HasShadow="false" HeightRequest="30">
+					<Grid Padding="-10,-16,-8,-16" ColumnSpacing="4">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="2*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="2*"/>
+							<ColumnDefinition Width="4*"/>
+							<ColumnDefinition Width="2*"/>
+							<ColumnDefinition Width="2*"/>
+						</Grid.ColumnDefinitions>
+						<Label x:Name="LabelNumberOfMultiply" Text="{Binding RecipeToKook.NumberOfMultiply}" TextColor="Black" FontSize="24" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+						<Label Text="Personen" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+						<Button Text="-" BackgroundColor="#2096F4" TextColor="White" Grid.Row="0" Grid.Column="2" Clicked="DecreaseButton_clicked"/>
+						<Button Text="+" BackgroundColor="#2096F4" TextColor="White" Grid.Row="0" Grid.Column="3" Clicked="IncreaseButton_clicked"/>						
+					</Grid>
+				</Frame>
+				<Label Text="  Ingredienten" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="24"/>
+			</StackLayout>
+		</ListView.Header>
+		<ListView.Footer>
+			<StackLayout>
+				<Button BackgroundColor="#2096F4" Text="START MET KOKEN" TextColor="White"/>
+			</StackLayout>
+		</ListView.Footer>
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<ViewCell.View>
+						<Grid Padding="16,0,16,16">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="40"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="10*"/>
+								<ColumnDefinition Width="15*"/>
+								<ColumnDefinition Width="20*"/>
+								<ColumnDefinition Width="45*"/>
+								<ColumnDefinition Width="10*"/>
+							</Grid.ColumnDefinitions>
+							<Label Text="{Binding UnitQuantity}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+							<Label Text="{Binding UnitName}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"/>
+							<Label Text="{Binding Name}" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="3"/>
+							<Button Grid.Row="0" Grid.Column="4"/>
+							<local:ShadedButton Clicked="OnTaskAdd" Grid.Row="0" Grid.Column="4"/>
+						</Grid>
+					</ViewCell.View>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>	
+</ContentPage>
